@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>#{indexController.pageTitle}</title>
+        <style type="text/css">
+            @import url("style.css");
+            span.form{background-color: beige}
+            span.label{color: red}
+            header{background-color: aqua;height: 75px}
+        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>  
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body>
+        <!-- Start Header -->
+        <header>
+            <h1>
+                Holiday Booking Enterprise Application
+            </h1>           
+        </header>
+        <div class="container">
+            <h:form>
+                <!-- Name input -->
+                <div class="form-group">
+                    <label for="name">User id:</label>
+                    <h:inputText class="form-control" id="UserId" label="Name" size="32" value="#{LoginBean.userId}">
+                    <!--
+                        <f:validateLength for="UserId" minimum="1" maximum="20">
+                        </f:validateLength>
+                    -->
+                    </h:inputText>
+                    <h:message class="form-control" for="UserId" style="color:red;margin:8px;size:8px">
+                    </h:message>
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password:</label>
+                    <h:inputText class="form-control" id="Password" label="password" maxlength="10" size="32" value="#{LoginBean.password}">
+                       <!--
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                       -->
+                       </h:inputText>
+                    <h:message class="form-control" for="Password" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+
+                <h:commandButton class="btn btn-primary" action="response" id="submit" value="Submit">
+                </h:commandButton>
+                <h:commandButton class="btn btn-primary" action="register" id="register" value="Register">
+                </h:commandButton>
+                <h:commandButton class="btn btn-primary" action="TransactionIndex" id="transaction" value="View Transactions">
+                </h:commandButton>
+            </h:form>
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>
+            FIT5042 Assignment - Register
+        </title>
+        <style type="text/css">
+            @import url("style.css");
+            span.form{background-color: beige}
+            span.label{color: red}
+            header{background-color: aqua;height: 75px}
+        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>  
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body>
+        <!-- Start Header -->
+        <header>
+            <h1>
+                Register
+            </h1>           
+        </header>
+        <div class="container">
+            <h:form>
+                <!-- Name input -->
+                <div class="form-group">
+                    <label for="name">User Id:</label>
+                    <h:inputText class="form-control" id="UserID" label="Name" required="true" requiredMessage="You must enter your username!"
+                                 size="32" value="#{UserBean.username}">
+                        <f:validateLength for="Username" minimum="1" maximum="20">
+                        </f:validateLength>
+                    </h:inputText>
+                    <h:message class="form-control" for="UserName" style="color:red;margin:8px;size:8px">
+                    </h:message>
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password:</label>
+                    <h:inputText class="form-control" id="Password" label="password" maxlength="10" required="true" requiredMessage="You must
+                                 enter your password!" size="32" value="#{UserBean.password}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="Password" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+
+                <div class="form-group">
+                    <label for="lName">Last Name:</label>
+                    <h:inputText class="form-control" id="lName" label="lName" maxlength="10" required="true" requiredMessage="You must
+                                 enter your last name!" size="32" value="#{UserBean.lName}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="lName" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <h:inputText class="form-control" id="fName" label="fName" maxlength="10" required="true" requiredMessage="You must
+                                 enter your first name!" size="32" value="#{UserBean.fName}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="fName" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <h:inputText class="form-control" id="email" label="email" maxlength="10" required="true" requiredMessage="You must
+                                 enter your email!" size="32" value="#{UserBean.lName}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="email" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <h:inputText class="form-control" id="phone" label="phone" maxlength="10" required="true" requiredMessage="You must
+                                 enter your phone number!" size="32" value="#{UserBean.phone}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="phone" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <h:inputText class="form-control" id="address" label="address" maxlength="10" required="true" requiredMessage="You must
+                                 enter your address!" size="32" value="#{UserBean.address}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="address" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <h:inputText class="form-control" id="city" label="city" maxlength="10" required="true" requiredMessage="You must
+                                 enter your city!" size="32" value="#{UserBean.city}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="city" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <h:inputText class="form-control" id="country" label="country" maxlength="10" required="true" requiredMessage="You must
+                                 enter your country!" size="32" value="#{UserBean.country}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="country" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+                
+                <div class="form-group">
+                    <label for="postcode">Postcode:</label>
+                    <h:inputText class="form-control" id="postcode" label="postcode" maxlength="10" required="true" requiredMessage="You must
+                                 enter your postcode!" size="32" value="#{UserBean.postcode}">
+                        <f:validateLongRange maximum="20" minimum="1">
+                        </f:validateLongRange>
+                    </h:inputText>
+                    <h:message class="form-control" for="postcode" style="color:red;margin:8px;">
+                    </h:message>
+                </div>
+
+                <h:commandButton class="btn btn-primary" action="index" id="submit" value="Submit">
+                </h:commandButton>               
+            </h:form>
+        </div>
+        <footer>
+            <p>
+                This project created by NAME GOES HERE
+            </p>
+        </footer>
+        <!-- End Footer -->
+    </h:body>
+</html>
